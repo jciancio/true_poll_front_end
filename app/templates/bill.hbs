@@ -1,3 +1,21 @@
 <h2>What do you think?</h2>
 {{model.title}}<br>
 {{model.description}}
+
+<h4>Votes</h4>
+Yes: {{model.votesFor}}<br>
+No: {{model.votesAgainst}}
+
+<ul>
+  <li>
+    <button id="vote-for" {{action 'voteFor'}}>
+      Yes
+    </button>
+  </li>
+
+  <li>
+    <button id="vote-against" {{action 'voteAgainst'}}>
+      No
+    </button>
+  </li>
+</ul>
