@@ -3,18 +3,18 @@
 {{model.description}}
 
 <h4>Votes</h4>
-Yes: {{model.votesFor}}<br>
-No: {{model.votesAgainst}}
+Yes: <span id="votesFor">{{model.votesFor}}</span><br>
+No: <span id="votesAgainst">{{model.votesAgainst}}</span>
 
 <ul>
   <li>
-    <button id="vote-for" {{action 'voteFor'}}>
+    <button id="vote-for" {{action 'voteFor' model}}>
       Yes
     </button>
   </li>
 
   <li>
-    <button id="vote-against" {{action 'voteAgainst'}}>
+    <button id="vote-against" {{action 'voteAgainst' model}}>
       No
     </button>
   </li>
