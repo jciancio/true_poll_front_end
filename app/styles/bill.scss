@@ -5,3 +5,14 @@
     margin-bottom: 10%;
   }
 }
+
+.vote-buttons {
+  margin-left: 0px;
+  text-align: center;
+  list-style: none;
+
+  li {
+    display: inline;
+    padding-right: 100px;
+  }
+}
