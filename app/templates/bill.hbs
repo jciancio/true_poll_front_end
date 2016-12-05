@@ -1,21 +1,29 @@
-<h2>What do you think?</h2>
-{{model.title}}<br>
-{{model.description}}
+<div class="bill row align-center align-middle">
+  <div class="bill-content column small-6">
+    <h2>What do you think?</h2>
+    {{model.title}}<br>
+    {{model.description}}
+  </div>
+</div>
+
+<div class="vote-buttons row align-center align-middle">
+  <div class="column small-6">
+    <ul>
+      <li>
+        <button id="vote-for" {{action 'voteFor' model}}>
+          Yes
+        </button>
+      </li>
+
+      <li>
+        <button id="vote-against" {{action 'voteAgainst' model}}>
+          No
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <h4>Votes</h4>
-Yes: <span id="votesFor">{{model.votesFor}}</span><br>
-No: <span id="votesAgainst">{{model.votesAgainst}}</span>
-
-<ul>
-  <li>
-    <button id="vote-for" {{action 'voteFor' model}}>
-      Yes
-    </button>
-  </li>
-
-  <li>
-    <button id="vote-against" {{action 'voteAgainst' model}}>
-      No
-    </button>
-  </li>
-</ul>
+  Yes: <span id="votesFor">{{model.votesFor}}</span><br>
+  No: <span id="votesAgainst">{{model.votesAgainst}}</span>
