@@ -5,4 +5,10 @@
 // @include foundation-grid;
 @include foundation-flex-classes;
 @include foundation-flex-grid;
+
+body {
+  background: map-get($foundation-palette, primary);
+  color: map-get($foundation-palette, black);
+}
+
 @import 'bill'

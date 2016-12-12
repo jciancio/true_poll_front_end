@@ -1,8 +1,14 @@
 .bill {
   text-align: center;
+  text-shadow: 8px 6px 8px map-get($foundation-palette, grey);
 
   .bill-content {
-    margin-bottom: 10%;
+    background: map-get($foundation-palette, secondary);
+    margin: 50px 5px;
+    padding: 30px;
+    color: $black;
+    border-radius: 10px;
+    box-shadow: 3px 10px 37px map-get($foundation-palette, secondary);
   }
 }
 
@@ -11,8 +17,22 @@
   text-align: center;
   list-style: none;
 
+  .button {
+    text-shadow: 8px 6px 8px map-get($foundation-palette, grey);
+    border-radius: 10px;
+    padding: 0.85em 1.3em;
+    box-shadow: 3px  6px 12px map-get($foundation-palette, secondary);
+
+    :focus {
+      outline: none;
+    }
+  }
+
+  .success {
+    margin-right: 60px;
+  }
+
   li {
     display: inline;
-    padding-right: 100px;
   }
 }

@@ -1,5 +1,5 @@
 <div class="bill row align-center align-middle">
-  <div class="bill-content column small-6">
+  <div class="bill-content column small-8">
     <h2>What do you think?</h2>
     {{model.title}}<br>
     {{model.description}}
@@ -10,13 +10,13 @@
   <div class="column small-6">
     <ul class="vote-buttons">
       <li>
-        <button id="vote-for" {{action 'voteFor' model}}>
+        <button id="vote-for" class="button success" {{action 'voteFor' model}}>
           Yes
         </button>
       </li>
 
       <li>
-        <button id="vote-against" {{action 'voteAgainst' model}}>
+        <button id="vote-against" class="button alert" {{action 'voteAgainst' model}}>
           No
         </button>
       </li>
