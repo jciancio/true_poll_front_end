@@ -1,8 +1,8 @@
-.bill {
+.card {
   text-align: center;
   text-shadow: 8px 6px 8px map-get($foundation-palette, grey);
 
-  .bill-content {
+  .card-content {
     background: map-get($foundation-palette, secondary);
     margin: 50px 5px;
     padding: 30px;

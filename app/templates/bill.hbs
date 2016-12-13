@@ -1,5 +1,5 @@
-<div class="bill row align-center align-middle">
-  <div class="bill-content column small-8">
+<div class="card bill row align-center align-middle">
+  <div class="card-content column small-8">
     <h2>What do you think?</h2>
     {{model.title}}<br>
     {{model.description}}
@@ -8,7 +8,7 @@
 
 <div class="vote row align-center align-middle">
   <div class="column small-6">
-    <ul class="vote-buttons">
+    <ul class="vote-buttons card-list">
       <li>
         <button id="vote-for" class="button success" {{action 'voteFor' model}}>
           Yes
@@ -24,6 +24,13 @@
   </div>
 </div>
 
-<h4>Votes</h4>
-  Yes: <span id="votesFor">{{model.votesFor}}</span><br>
-  No: <span id="votesAgainst">{{model.votesAgainst}}</span>
+<div class="card row align-center align-middle">
+  <div class="card-content column small-8">
+    <h2>Votes</h2>
+    {{votes-component model=model}}
+    {{!-- <ul class="card-list">
+      <li>Yes: <span id="votesFor">{{model.votesFor}}</span><br></li>
+      <li>No: <span id="votesAgainst">{{model.votesAgainst}}</span></li>
+    </ul> --}}
+  </div>
+</div>
