@@ -27,10 +27,6 @@
 <div class="card row align-center align-middle">
   <div class="card-content column small-8">
     <h2>Votes</h2>
-    {{votes-component model=model}}
-    {{!-- <ul class="card-list">
-      <li>Yes: <span id="votesFor">{{model.votesFor}}</span><br></li>
-      <li>No: <span id="votesAgainst">{{model.votesAgainst}}</span></li>
-    </ul> --}}
+    {{votes-component votesFor=model.votesFor votesAgainst=model.votesAgainst}}
   </div>
 </div>

@@ -1,28 +1,24 @@
 import Ember from 'ember';
 import VerticalBarChartComponent from 'ember-charts/components/vertical-bar-chart';
 
-const { computed, get, on, getProperties, setProperties } = Ember;
+const { computed, get } = Ember;
 
-// export default Ember.Component.extend({
-// });
+export default VerticalBarChartComponent.extend({
+  data: computed('votesFor', 'votesAgainst', function(){
+    let votesFor = get(this, 'votesFor'),
+        votesAgainst = get(this, 'votesAgainst');
 
-var MyVbcComponent = VerticalBarChartComponent.extend({
-  data: computed('model', function(){
-    let model, yesVotes, noVotes;
-    model = get(this, 'model');
-    yesVotes = model.data.votesFor
-    noVotes = model.data.votesAgainst;
-    return [
+    let chartData = [
       {
         label: 'Yes',
-        value: yesVotes
+        value: votesFor
       },
       {
         label: 'No',
-        value: noVotes
+        value: votesAgainst
       }
-    ]
+    ];
+
+    return chartData;
   })
 });
-
-export default MyVbcComponent;

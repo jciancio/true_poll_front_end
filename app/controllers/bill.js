@@ -12,6 +12,7 @@ export default Ember.Controller.extend({
   },
 
   vote(bill, position) {
+    let model = this.model;
     Ember.$.ajax({
       type: 'POST',
       url: `/bills/${bill.id}/votes`,
@@ -23,12 +24,9 @@ export default Ember.Controller.extend({
         }
       })
     })
-    .done(function(result){
-      let votesFor = result.bill.votes_for;
-      let votesAgainst = result.bill.votes_against;
-
-      Ember.$('#votesFor').html(votesFor);
-      Ember.$('#votesAgainst').html(votesAgainst);
+    .then(function(result){
+      model.set('votesFor', result.bill.votes_for);
+      model.set('votesAgainst', result.bill.votes_against);
     });
   }
 });
