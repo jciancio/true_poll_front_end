@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('bills');
+  this.route('bills', { resetNamespace: true }, function(){
+    this.route('new');
+  });
   this.route('bill', { path: '/bill/:bill_id' });
 });
 

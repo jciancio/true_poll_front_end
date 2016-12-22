@@ -1,0 +1,12 @@
+<div class="card bill row align-center align-middle">
+  <div class="card-content column small-8">
+    <h1>Create a new poll</h1>
+    <form {{action 'create' on='submit'}}>
+      <h2>Title</h2>
+      {{input placeholder='Please enter a title' valueBinding='title'}}
+      <h3>Description</h3>
+      {{textarea placeholder='Please enter a description' valueBinding='description'}}
+      <button>Create</button>
+    </form>
+  </div>
+</div>
